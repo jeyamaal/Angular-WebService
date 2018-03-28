@@ -14,5 +14,15 @@
 </div>
 
 
+<form [formGroup]="appForm" (ngSubmit)="onSubmit()">
+   <input type="text" formControlName="id" placeholder="ID"/>
+   <input type="text" formControlName="name" placeholder="Role Name"/>
+  
+   <button type="submit">Submit</button>
+</form>
+
+
+
+
 
 

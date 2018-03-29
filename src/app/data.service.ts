@@ -97,8 +97,9 @@ export class DataService  {
 
   private extractData(res: Response) {    
      return res.text() ? res.json() : {}; 
-}
+ }
 
+}
 
  /**
  * Web method - BackEnd 
@@ -132,10 +133,31 @@ export class DataService  {
  * 
 */
 
+//----------------WebConfigFile---------------------------------
+
+/**
+ * 
+  <system.web>
+<compilation debug="true" targetFramework="4.5.2" />
+<httpRuntime targetFramework="4.5.2" />
+<webServices>
+  <protocols>
+    <add name="HttpGet"/>
+    <add name="HttpPost"/>
+  </protocols>
+</webServices>
+</system.web>
  
+//--------------------------------------------------------------------
+
+    <httpProtocol>
+      <customHeaders>
+        <add name="Access-Control-Allow-Headers"  value="Origin, X-Requested-With, Content-Type, Accept,application/x-www-form-urlencoded" />
+        <add name="Access-Control-Allow-Origin" value="http://localhost:4200"/>
+        <add name="Access-Control-Allow-Methods" value="POST, GET, OPTIONS,PUT,DELETE" />
+        <add name="Access-Control-Allow-Credentials" value="true" />
+      </customHeaders>
+    </httpProtocol>
+ */
 
 
-
-
-
-}
